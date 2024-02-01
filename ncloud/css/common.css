@@ -190,6 +190,7 @@ transition: all 0.3s;}
 .h3{font-size: 32px; margin-bottom: 50px;}
 .section2_title{position: relative;}
 
+.section2 .container .swiper{overflow: visible;}
 
 .banner_wrap{position: relative;}
 .swiper-wrapper{}
@@ -259,6 +260,7 @@ font-weight: 600 !important;
 
 
 .section3{background-color: #f6f7f8; padding: 50px 0;}
+.section3 .container .swiper_icon{overflow: visible;}
 
 .icon_container_title{display: flex; justify-content: space-between;}
 
@@ -374,6 +376,7 @@ font-weight: 600 !important;
 
 /*section4*/
 .section4{padding: 50px 0;}
+.section4 .container .solution{overflow: visible;}
 .solution .solution_slide{border: 1px solid #ededed;width: 300px !important;height: 300px;position: relative; padding: 30px; box-sizing: border-box; border-radius: 30px; overflow: hidden;transition: all 0.2s ease-out;}
 .solution_card_txt h5{font-size: 24px; margin-bottom: 10px;}
 .solution_card_txt span{font-size: 16px;}
@@ -417,6 +420,7 @@ font-weight: 600 !important;
 
 /* section6 */
 .section6{padding: 50px 0;}
+.section6 .container .solution_1{overflow: visible;}
 .section6_container .section6_next,
 .section6_container .section6_prev{
     position: absolute;

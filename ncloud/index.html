@@ -1782,6 +1782,7 @@
                         <div class="swiper-button-prev section2_prev"></div>
                         
                     </div>
+                    <div class="container">
                     <div class="banner_wrap">
                     <div class="swiper banner_slide">
                         <div class="swiper-wrapper">
@@ -1959,19 +1960,17 @@
                         </div><!-- swiper-wrapper -->
                     </div><!-- swiper banner_slide -->
                     </div><!-- banner_wrap -->
+                    </div><!-- container -->
                     
                 </div><!-- container block_container -->
                 <!-- block_container js -->
                 <script>
-                    var swiper = new Swiper(".banner_slide", {
-                        slidesPerView: 3,
-                        slidesPerGroup: 2,
+                    var swiper2 = new Swiper(".banner_slide", {
+                        slidesPerView: 'auto',
                         spaceBetween: 30,
-                        slidesOffsetBefore : 310,
-                        slidesOffsetAfter: -1450,
                         navigation: {
-                        nextEl: ".swiper-button-next",
-                        prevEl: ".swiper-button-prev",
+                        nextEl: ".section2 .swiper-button-next",
+                        prevEl: ".section2 .swiper-button-prev",
                         },
                         
                         
@@ -1981,6 +1980,7 @@
             
             <section class="section3">
                 <div class="icon_container">
+                    <div class="container">
                     <div thumbsSlider="" class="swiper mySwiper swiper_icon">
                         <div class="title_container container">
                             <div class="icon_container_title">
@@ -2178,10 +2178,11 @@
                             
                         </div><!-- swiper-wrapper -->
                     </div><!-- swiper_icon -->
+                    </div><!-- container -->
 
 
                     <div class="container">
-                        <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+                        <div class="swiper mySwiper2 swiper_icon2">
                             <div class="swiper-wrapper">
                                 <!--Featured-->
                                 <div class="swiper-slide">
@@ -3348,30 +3349,27 @@
                     </div><!-- container -->
                     
                     <script>
-                        var swiper = new Swiper(".mySwiper", {
+                        var swiper3 = new Swiper(".swiper_icon", {
                         spaceBetween: 10,
-                        slidesPerView: 7,
-                        slidesPerGroup: 4,
-                        slidesOffsetBefore : 310,
-                        slidesOffsetAfter: -1680,
+                        slidesPerView: 'auto',
                         freeMode: false,
                         watchSlidesProgress: true,
+                        
 
                         navigation: {
-                            nextEl: ".swiper-button-next",
-                            prevEl: ".swiper-button-prev",
+                            nextEl: ".section3 .swiper-button-next",
+                            prevEl: ".section3 .swiper-button-prev",
                         },
-                        thumbs: {
-                            swiper: swiper,
-                        },
+                    
                         });
-                        var swiper2 = new Swiper(".mySwiper2", {
+
+                        var swiper4 = new Swiper(".swiper_icon2", {
                         spaceBetween: 10,
-                        
-                        thumbs: {
-                            swiper: swiper,
-                        },
                         allowTouchMove : false,
+                        effect: "fade",
+                        thumbs: {
+                            swiper: swiper3,
+                        },
                         });
                     </script>
                 </div><!-- container icon_container -->
@@ -3389,6 +3387,7 @@
                         </div><!-- icon_container_title -->
                     </div><!-- title_container -->
                     
+                    <div class="container">
                     <div class="swiper solution">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide solution_slide card1">
@@ -3499,19 +3498,17 @@
                             
                         </div><!-- swiper-wrapper -->
                     </div><!-- solution -->
-                    
+                    </div><!-- container -->
+
                 </div><!-- section4_container -->
 
                 <script>
-                    var swiper = new Swiper(".solution", {
-                        slidesPerView: 5,
-                        slidesPerGroup: 4,
+                    var swiper5 = new Swiper(".section4 .solution", {
+                        slidesPerView: 'auto',
                         spaceBetween: 30,
-                        slidesOffsetBefore : 310,
-                        slidesOffsetAfter: -140,
                         navigation: {
-                        nextEl: ".swiper-button-next",
-                        prevEl: ".swiper-button-prev",
+                        nextEl: ".section4 .swiper-button-next",
+                        prevEl: ".section4 .swiper-button-prev",
                         },
                         
                     });
@@ -3564,7 +3561,8 @@
                         </div><!-- icon_container_title -->
                     </div><!-- title_container -->
                     
-                    <div class="swiper solution client">
+                    <div class="container">
+                    <div class="swiper solution_1 client">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide  client_slide">
                                 <div class="solution_card ">
@@ -3753,19 +3751,17 @@
                             
                         </div><!-- swiper-wrapper -->
                     </div><!-- solution -->
+                    </div><!-- container -->
                     
                 </div><!-- section6_container -->
 
                 <script>
-                    var swiper = new Swiper(".solution", {
-                        slidesPerView: 5,
-                        slidesPerGroup: 4,
+                    var swiper6 = new Swiper(".solution_1", {
+                        slidesPerView: 'auto',
                         spaceBetween: 30,
-                        slidesOffsetBefore : 310,
-                        slidesOffsetAfter: -140,
                         navigation: {
-                        nextEl: ".swiper-button-next",
-                        prevEl: ".swiper-button-prev",
+                        nextEl: ".section6 .swiper-button-next",
+                        prevEl: ".section6 .swiper-button-prev",
                         },
                         
                     });
@@ -3918,6 +3914,5 @@
         </footer><!-- footer -->
     </div><!-- wrap -->
 
-    <!--지은이언니 바보-->
 </body>
 </html>
