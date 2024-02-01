@@ -7,7 +7,7 @@
     PAGES
 ---------------------------------------*/
 /* Layout */
-#wrap{width: 100%;}
+#wrap{width: 100%; overflow: hidden;}
 .container{max-width: 1280px;margin: 0 auto;padding: 0 35px;}
 .container-xl{max-width: 1590px;}
 
@@ -268,7 +268,7 @@ font-weight: 600 !important;
 .title_container{position: relative;}
 
 .section3 .icon_container .swiper_wrapper11 .swiper-slide{
-    width: 166px !important;height: 160px !important; margin-right: 20px !important;
+    width: 166px !important;height: 160px !important;
     box-sizing: border-box; text-align: center;
 }
 
@@ -338,7 +338,7 @@ font-weight: 600 !important;
 .text_no{text-indent: -9999px;}
 
 .swiper_icon_list_right_inner{
-    width: 795px;
+    width: 100%;
     height: 350px;
     box-sizing: border-box;
     padding: 30px 40px;
@@ -361,7 +361,7 @@ font-weight: 600 !important;
 .icon_list_right_btn{position: absolute; right: 40px; top: 20px;}
 
 .section3 .icon_container .section3_next:hover,
-.section3 .icon_container .section3_prev:hover{background-color: #0f6dcd;}
+.section3 .icon_container .section3_prev:hover{background-color: #0f6dcd; border: 1px solid #0f6dcd;}
 .section3 .icon_container .section3_next,
 .section3 .icon_container .section3_prev{
     background-color: #222;
@@ -369,10 +369,10 @@ font-weight: 600 !important;
     height: 40px ;
     border-radius: 50%;
     color: #fff ;
-    left: 1275px;
+    left: 1240px;
     top: 25px;
 }
-.section3 .icon_container .section3_prev{left: 1220px;}
+.section3 .icon_container .section3_prev{left: 1185px;}
 
 /*section4*/
 .section4{padding: 50px 0;}
@@ -467,7 +467,7 @@ font-weight: 600 !important;
 .sns{display: flex; justify-content: space-between; border-bottom: 1px solid #333; padding: 30px 0;}
 .ncloud_new{display: flex; justify-content: end; align-items: center; gap: 50px;}
 .footer_btn{background-color: inherit; border: 1px solid #666; border-radius: 10px; color: #fff; position: relative;}
-.footer_btn:hover{background-color: #4ca4f5; cursor: pointer;}
+.footer_btn:hover{background-color: #4ca4f5;border: 1px solid #4ca4f5; cursor: pointer;}
 .footer_btn img{vertical-align: middle;}
 .footer_btn .languages_list{display: none; background-color: #fff; width: 140px; right: 0; top: -155px;}
 .footer_btn .languages_list li{height: 40px; padding-top: 10px;}
