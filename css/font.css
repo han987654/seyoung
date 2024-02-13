@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "icon-portal";
+    src: url("icon-portal/icomoon-1baab7cbaf.eot?wbck6e");
+    src: url("icon-portal/icomoon-1baab7cbaf.eot?wbck6e#iefix") format("embedded-opentype"),url("icon-portal/icomoon-53939901da.woff2?wbck6e") format("woff2"),url("icon-portal/icomoon-539d139f2d.ttf?wbck6e") format("truetype"),url("icon-portal/icomoon-90d4965a8b.woff?wbck6e") format("woff"),url("icon-portal/icomoon-5746bf6e8b.svg?wbck6e#icomoon") format("svg");
+    font-weight: normal;
+    font-style: normal
+}
