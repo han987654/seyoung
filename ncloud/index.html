@@ -48,7 +48,7 @@
 
             <div class="navbar">
                 <div class="container flex-justify-space">
-                    <div class="logo"><a href="#"><img src="img/ncp-logo-white.png" alt="logo"></a></div>
+                    <div class="logo"><a href="#"></a></div>
                     <nav class="gnb">
                         <ul class="gnb">
                             <li>  <!---소개--->
@@ -1747,30 +1747,41 @@
                     </div><!-- swiper-wrapper -->
                     
                     
-                </div>
+                </div><!-- main_visual_video -->
+
                 <!--main_visual js-->
-                
                 <script>
-                    var bullet = ['CLOVA Studio','GAK SEJONG','Digital Twin']
                     // var bullet = [  ['bullet01','CLOVA Studio'],
                     //                 ['bullet02','GAK SEJONG'],
                     //                 ['bullet03','Digital Twin'],];
-                    var swiper = new Swiper(".main_visual_video", {
-                    spaceBetween: 30,
-                    effect: "fade",
                     
-                    pagination: {
-                        el: ".swiper-pagination",
-                        clickable: true,
-                        renderBullet: function (index, className) {
-                        return '<div class="' + className + '"><span>' + (bullet[index]) + '</span></div>';
-                        }
-                    },
-                    autoplay: {
-                    delay: 5000,
-                    disableOnInteraction: false,
-                    }
+                    var bullet = ['CLOVA Studio','GAK SEJONG','Digital Twin']
+                    var swiper = new Swiper(".main_visual_video", {
+                        spaceBetween: 30,
+                        effect: "fade",
+                        
+                        pagination: {
+                            el: ".swiper-pagination",
+                            clickable: true,
+                            renderBullet: function (index, className) {
+                            return '<div class="' + className + '"><span>' + (bullet[index]) + '</span></div>';
+                            }
+                        },
+                        autoplay: {
+                        delay: 5000,
+                        disableOnInteraction: false,
+                        },
+                    
                     });
+
+
+
+                    
+
+
+                    
+                    
+                    
                 </script>
             </section>
 
@@ -1983,8 +1994,8 @@
                     <div thumbsSlider="" class="swiper mySwiper swiper_icon">
                         <div class="title_container">
                             <div class="icon_container_title">
-                                <h3 class="h3">고객이 원하는 클라우드 환경 구축을 위한 <br>다양한 서비스를 제공합니다</h3>
-                                <a href="#" class="btn btn-bk section_btn">서비스 전체 보기</a>
+                                <h3 class="h3">고객이 원하는 클라우드 환경 구축을 위한 <br> 다양한 서비스를 제공합니다</h3>
+                                <a href="#" class="btn btn-bk section_btn subis_btn">서비스 전체 보기</a>
                                 <div class="swiper-button-next section3_next"></div>
                                 <div class="swiper-button-prev section3_prev"></div>
                             </div><!-- icon_container_title -->
@@ -3516,7 +3527,7 @@
 
             <section class="section5">
                 <div class="container section5_inner">
-                    <div class="content promotions">
+                    <div class="content promotions content1">
                         <a href="#">
                             <div class="content_txt"  style="color: #fff;">
                                     <span>프로모션</span>
@@ -3526,7 +3537,7 @@
                             </div><!-- content_bg -->
                         </a>
                     </div><!-- promotions -->
-                    <div class="content news">
+                    <div class="content news content1">
                         <a href="#">
                             <div class="content_txt"  style="color: #fff;">
                                     <span>소식</span>
@@ -3536,7 +3547,7 @@
                             </div><!-- content_bg -->
                         </a>
                     </div><!-- promotions -->
-                    <div class="content event">
+                    <div class="content event content1">
                         <a href="#">
                             <div class="content_txt">
                                     <span>이벤트</span>
@@ -3784,7 +3795,7 @@
                         <a href="#">
                             <div class="content_txt"  style="color: #fff;">
                                     <h5>지원 프로그램</h5>
-                                    <span>진행 중인 프로모션을 <br> 한눈에 확인하세요.</span>
+                                    <span>다양한 프로그램을 통해 <br> 성공적인 DX와 비즈니스 혁신을 지원합니다.</span>
                             </div><!-- content_txt -->
                             <img src="img/footer_img02.png" alt="footer_img">
                             <div class="content_bg">
@@ -3875,7 +3886,7 @@
                 <div class="footer_list">
                     <div class="footer_top">
                         <div class="top_left">
-                            <div class="logo"><a href="#">NAVER Cloud</a></div>
+                            <div class="f_logo"><a href="#">NAVER Cloud</a></div>
                             <div class="footer_top_list">
                                 <span><a href="#">서비스 이용약관</a></span>
                                 <span><a href="#">개인정보처리방침</a></span>
