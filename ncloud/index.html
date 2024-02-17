@@ -19,7 +19,7 @@
     <script src="script/common.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
-<body style="height: 3000px;">
+<body>
     <div id="wrap">
         <header id="header">
             <div class="header_top">
@@ -48,11 +48,22 @@
 
             <div class="navbar">
                 <div class="container flex-justify-space">
-                    <div class="logo"><a href="#"></a></div>
-                    <nav class="gnb">
+                    <div class="logo"><a href="#">NAVER CLOUD PLATFORM</a></div>
+                    <nav id="gnb">
+                        <!-- 모바일 전용 메뉴 -->
+                        <button type="button" class="js-gnb-open no-style" title="메뉴 열기"><i class="xi-bars"></i></button>
+                        <div id="acc">
+                            <div class="buttons">
+                                <a href="">로그인</a>
+                                <a href="">회원 가입</a>
+                                <a href="">Languages</a>
+                            </div>
+                            <button type="button" class="js-gnb-cls no-style" title="메뉴 닫기"><i class="xi-close"></i></button>
+                        </div>
+                        <!--// 모바일 전용 메뉴 -->
                         <ul class="gnb">
                             <li>  <!---소개--->
-                                <a href="#">소개</a>
+                                <a href="https://www.ncloud.com/solution">소개</a>
                                 <div class="depth">
                                     <div class="container container_depth">
                                         <div class="depth_left">
@@ -90,7 +101,7 @@
                                         <div class="depth2_left">
                                             <div class="depth_wrap depth2_left_wrap">
                                                 <ul class="depth2_title">
-                                                    <li><a href="#" class="first">Featured</a></li>
+                                                    <li class="current"><a href="#">Featured</a></li>
                                                     <li><a href="#">Compute</a></li>
                                                     <li><a href="#">Containers</a></li>
                                                     <li><a href="#">Storage</a></li>
@@ -1612,7 +1623,7 @@
                                             <div class="depth_wrap sub_wrap">
                                                 <ul class="depth_list">
                                                     <li>
-                                                        지원 센터
+                                                        <span>지원 센터</span>
                                                         <div class="depth_right_list">
                                                             <a href="#">공지사항 <span class="up">Update</span></a>
                                                             <a href="#">자주하는 질문 <span class="up">Update</span></a>
@@ -1625,7 +1636,7 @@
                                                 </ul>
                                                 <ul class="depth_list">
                                                     <li>
-                                                        교육 센터
+                                                        <span>교육 센터</span>
                                                         <div class="depth_right_list">
                                                             <a href="#">교육 포털</a>
                                                             <a href="#">교육 및 행사 신청하기 <span class="up">Update</span></a>
@@ -1751,28 +1762,58 @@
 
                 <!--main_visual js-->
                 <script>
-                    // var bullet = [  ['bullet01','CLOVA Studio'],
-                    //                 ['bullet02','GAK SEJONG'],
-                    //                 ['bullet03','Digital Twin'],];
+                    var bullet = ['CLOVA Studio','GAK SEJONG','Digital Twin'];
+                    var winw = $(window).width();
+                    var swiper = undefined;
                     
-                    var bullet = ['CLOVA Studio','GAK SEJONG','Digital Twin']
-                    var swiper = new Swiper(".main_visual_video", {
-                        spaceBetween: 30,
-                        effect: "fade",
-                        
-                        pagination: {
-                            el: ".swiper-pagination",
-                            clickable: true,
-                            renderBullet: function (index, className) {
-                            return '<div class="' + className + '"><span>' + (bullet[index]) + '</span></div>';
-                            }
-                        },
-                        autoplay: {
-                        delay: 5000,
-                        disableOnInteraction: false,
-                        },
+                    function initSwiper() {
+                        if (winw > 767 && swiper == undefined){
+                            swiper = new Swiper(".main_visual_video", {
+                                spaceBetween: 30,
+                                effect: "fade",
+                                pagination: {
+                                    el: ".swiper-pagination",
+                                    clickable: true,
+                                    renderBullet: function (index, className) {
+                                    return '<div class="' + className + '"><span>' + (bullet[index]) + '</span></div>';
+                                    }
+                                },
+                                autoplay: {
+                                    delay: 5000,
+                                    disableOnInteraction: false,
+                                }
+                            });
+                        } else if (winw <= 767 && swiper != undefined) {
+                            swiper.destroy();
+                            swiper = undefined;
+                        }
+                    }
                     
+                    initSwiper();
+                    $(window).on('resize', function () {
+                        winw = $(window).width();
+                        initSwiper(); 
                     });
+                        
+
+                    
+//                    var swiper = new Swiper(".main_visual_video", {
+//                        spaceBetween: 30,
+//                        effect: "fade",
+//                        
+//                        pagination: {
+//                            el: ".swiper-pagination",
+//                            clickable: true,
+//                            renderBullet: function (index, className) {
+//                            return '<div class="' + className + '"><span>' + (bullet[index]) + '</span></div>';
+//                            }
+//                        },
+//                        autoplay: {
+//                        delay: 5000,
+//                        disableOnInteraction: false,
+//                        },
+//                    
+//                    });
 
 
 

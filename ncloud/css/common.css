@@ -1,7 +1,12 @@
 @charset "UTF-8";
 
-@import url(font.css);
-@import url(icon.css);
+@import url(https://cdn.jsdelivr.net/gh/xpressengine/xeicon@2.3.3/xeicon.min.css);
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
 
 /*--------------------------------------
     PAGES
@@ -39,10 +44,13 @@ body.is-scroll #header{backdrop-filter:blur(10px);;}
 .gnb>li{display: inline-block;}
 .gnb>li.current>.depth{display: block} /* 물어보기*/
 .gnb>li>a{display: block;height: 60px;padding: 0 15px;font-size: 16px;font-weight: 700;line-height: 60px;color: #fff;transition: all 0.3s;}
-.gnb>li>a:hover{color:#4ca4f5;}
+.gnb>li>a:hover,
+.gnb>li.current>a{color:#4ca4f5;}
 .depth{display: none;position: absolute;top: 100%;left: 0;width: 100%;padding: 30px 0 40px;border-bottom:1px solid #e0e0e0;font-size: 16px;background:#f6f7f8}
 .depth>.container{overflow: hidden}
 
+#acc{display: none}
+.js-gnb-open{display: none}
 
 .container_depth{display: flex; flex-direction: row;}
 /* .depth_left */
@@ -66,7 +74,7 @@ body.is-scroll #header{backdrop-filter:blur(10px);;}
 .depth2_title>li>a{display: block; color: #000;}
 
 /* 색깔고정되어있는거 물어보기 */
-.depth2_title>li>a.first{color: #117ce9;}
+.depth2_title>li.current>a{color: #117ce9;}
 
 .depth2_title{ /* overflow-y: scroll; */font-size: 14px;line-height: 2;padding-left: 10px;}
 .depth2_left{}
@@ -75,8 +83,6 @@ body.is-scroll #header{backdrop-filter:blur(10px);;}
 
 .depth2_list_h2>li>h2:hover{color: #117ce9;}
 
-/* 타이틀 호버 */
-.depth2_title>li:hover a{color: #117ce9;}
 
 
 
@@ -107,8 +113,8 @@ body.is-scroll #header{backdrop-filter:blur(10px);;}
 .depth2_list>li:not(.current){display: none;}
 .depth2_list>li.hover{display: block !important;}
 
-.logo a{display: inline-block;background-image: url(../img/ncp-logo-white.png); background-size: cover; background-repeat: no-repeat;
-    width: 186px; height: 32px; border: 1px solid red;}
+.logo a{display: block;background-image: url(../img/ncp-logo-white.png); background-size: 100% auto; background-repeat: no-repeat;
+    width: 186px; height: 32px; font-size: 0; text-indent: -9999px}
 
 
 /*파란 btn*/
@@ -370,23 +376,58 @@ transition: all 0.3s;}
 /* 반응형 */
 
 @media screen and (max-width:1259px){
-#header{position: absolute;}
-.header_top{display: none;}
-.gnb{display: none;}
-.navbar{padding: 10px 0;}
-body.is-scroll #header{backdrop-filter: none;}
-.section2_container .section2_next,
-.section2_container .section2_prev{display: none;}
-.banner_img{width: 300px !important;height: 333px;}
-.section3 .icon_container .section3_next,
-.section3 .icon_container .section3_prev{display: none;}
-.icon_container_title .section_btn{margin-right: 0px;}
-.section4_container .section4_next,
-.section4_container .section4_prev{display: none;}
-.section6_container .section6_next,
-.section6_container .section6_prev{display: none;}
-.content1{height: 154px;}
-.content{height: 140px;}
+    #header{position: absolute;}
+    .header_top{display: none;}
+    .js-gnb-open{display: block;font-size: 30px;color: #fff;}
+    .gnb{display: none;}
+    .gnb-open .gnb{display: block}
+    .navbar{padding: 10px 0;}
+    .logo a{width: 163px; height: 28px}
+    .container{box-sizing: border-box;}
+    /*gnb*/
+    #gnb .container{padding: 0}
+    .gnb-open{overflow: hidden;height: 100%;}
+    .gnb-open #header:after{content: '';position: fixed;top: 0;left: 0;right: 0;bottom: 0;background: rgba(0,0,0,0.5)}
+    .gnb-open #gnb{overflow-y: scroll;max-height: 100vh;position: fixed;top: 0;left: 0;right: 0;z-index: 999;background: #fff}
+    .gnb-open #acc{display: block}
+    #gnb .depth_left,#gnb .depth2_left{display: none}
+    .gnb>li{display: block;border-bottom: 1px solid #dadada;}
+    .gnb>li>a{color: #222; height: auto; line-height: 47px}
+    .gnb .depth{position: static; padding: 0; border-bottom: none}
+    .gnb>li.current>.depth{display: none}
+    .depth_right_list{display: none}
+    .sub_wrap{display: block ;}
+    .sub_wrap>ul{padding: 0; width: 100%;padding: 0}
+    .sub_wrap >ul> li:last-child{margin: 0}
+    .sub_wrap >ul> li{font-size: 14px;padding: 0; border-top: none; border-bottom:1px solid #fff; font-weight: 400}
+    .sub_wrap>ul>li>a{padding: 15px 20px}
+    .depth_list>li>span{display: block; font-size: 14px;padding: 15px 20px; border-top: none;font-weight: 400; cursor: pointer}
+    .depth2_sub_list{display: none}
+    .depth2_sub_list>ul{width: 100%;}    
+    .depth2_sub_list>ul>li p:last-child {display: none}
+    .depth2_sub_list>ul>li .p_txt{display: none}
+    .depth2_sub_list>ul>li p.p_txt2{font-size: 14px; font-weight: 200}
+    .depth2_sub_list>ul>li{padding: 0; border: none; background-color: #f1f1f1}
+    .depth2_sub_list>ul>li a{display: block; padding-left: 20px; width: 100%;padding: 15px 20px} 
+    .depth2_list >li >h2{margin-bottom: 0;padding: 15px 20px;border-bottom: 1px solid #fff;font-size: 14px;font-weight: 400;cursor: pointer}
+    .depth2_sub_list>ul:nth-child(2){margin: 0}
+    #gnb .depth2_list>li{display: block; padding: 0}
+    #gnb .sub_bottom_size{padding-bottom: 0}
+    
+    
+    body.is-scroll #header{backdrop-filter: none;}
+    .section2_container .section2_next,
+    .section2_container .section2_prev{display: none;}
+    .banner_img{width: 300px !important;height: 333px;}
+    .section3 .icon_container .section3_next,
+    .section3 .icon_container .section3_prev{display: none;}
+    .icon_container_title .section_btn{margin-right: 0px;}
+    .section4_container .section4_next,
+    .section4_container .section4_prev{display: none;}
+    .section6_container .section6_next,
+    .section6_container .section6_prev{display: none;}
+    .content1{height: 154px;}
+    .content{height: 140px;}
 }
 
 @media screen and (max-width:1051px){
@@ -401,7 +442,12 @@ body.is-scroll #header{backdrop-filter: none;}
 @media screen and (max-width:767px) {
     .h3{font-size: 24px;}
     body.is-scroll #header{backdrop-filter: none;}
-    .gnb_right{display: none;}
+    .gnb_right>a:not(.b_r_1){display: none;}
+    
+    /* main swiper1 */
+    
+    .main_visual_video .swiper-wrapper{display: block}
+    
     .section3{padding: 50px 0 100px 0;}
     .section4{padding: 50px 0 100px 0;}
     .section6{padding: 50px 0 100px 0;}
