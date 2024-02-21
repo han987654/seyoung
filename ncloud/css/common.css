@@ -21,7 +21,7 @@
 .header_top{height: 32px;background: rgba(0,0,0,.6);color: #fff;}
 
 
-.t_list{height: 3ht5px;line-height: 35px; display: flex; justify-content: space-between;font-size: 12px; font-weight: 600;}
+.t_list{height: 35px;line-height: 35px; display: flex; justify-content: space-between;font-size: 12px; font-weight: 600;}
 .t_list > li > span{margin-right: 10px;}
 
 .t_right{display: flex;}
@@ -39,7 +39,7 @@ position: absolute; right: -10px;top: 27px;}
 
 /* nav */
 body.is-scroll #header{backdrop-filter:blur(10px);;}
-.navbar:hover{background: #000}
+/* .navbar:hover{background: #000} */
 .gnb{font-size: 0;}
 .gnb>li{display: inline-block;}
 .gnb>li.current>.depth{display: block} /* 물어보기*/
@@ -135,7 +135,8 @@ body.is-scroll #header{backdrop-filter:blur(10px);;}
 .gnb_right >a{display: block; margin-left: 10px; width: 90px;height: 30px; line-height: 30px;text-align: center;font-size: 12px; font-weight: bold; border-radius: 5px;
 transition: all 0.3s;}
 .gnb_right >a:hover{background-color: #4ca4f5; color: #fff;}
-.b_r_1{}
+.b_r_1{font-size: 30px;color: #fff;transition: all 0.3s;}
+.b_r_1:hover{color: #4ca4f5;}
 .b_r_2{border: 1px solid #fff; color: #fff;transition: all 0.3s;}
 .b_r_2:hover{ border: 1px solid #4ca4f5; }
 .b_r_3{background-color: #fff; color: #555;}
@@ -378,18 +379,31 @@ transition: all 0.3s;}
 @media screen and (max-width:1259px){
     #header{position: absolute;}
     .header_top{display: none;}
-    .js-gnb-open{display: block;font-size: 30px;color: #fff;}
+    .js-gnb-open{display: block;font-size: 30px;color: #fff;margin-left: 8px; cursor: pointer;}
+    .b_r_1{display: none;}
+    .b_r_3{margin-right: 20px;}
+    .xi-search{transition: all 0.3s;}
+    .xi-search:hover{color: #4ca4f5;}
     .gnb{display: none;}
     .gnb-open .gnb{display: block}
+    .gnb>li>a:hover{color: inherit;}
+    .gnb>li.current>a{color:#4ca4f5;}
     .navbar{padding: 10px 0;}
     .logo a{width: 163px; height: 28px}
     .container{box-sizing: border-box;}
+
+    .acc_buttons{box-sizing: border-box; display: flex;align-items: center;flex-direction: row; justify-content: space-between;height: 60px;width: 100%; background-color: #14adea;padding: 0 20px; color: #fff;}
+    .buttons{ width: 80%; font-size: 13px; font-weight: 500;}
+    .buttons a:first-child{border-right: 1px solid #fff; padding-right: 10px;margin-right: 5px;}
+    .buttons a:last-child{border: 1px solid #fff;margin-left: 5px; width: 113px;line-height: 1.08;padding: 8px 15px; border-radius: 8px;transition: all 0.3s;}
+    .buttons a:last-child:hover{background-color: #0f6dcd; border: 1px solid #0f6dcd;}
+    .js-gnb-cls{ font-size: 20px; color: #fff; cursor: pointer;}
     /*gnb*/
     #gnb .container{padding: 0}
     .gnb-open{overflow: hidden;height: 100%;}
     .gnb-open #header:after{content: '';position: fixed;top: 0;left: 0;right: 0;bottom: 0;background: rgba(0,0,0,0.5)}
     .gnb-open #gnb{overflow-y: scroll;max-height: 100vh;position: fixed;top: 0;left: 0;right: 0;z-index: 999;background: #fff}
-    .gnb-open #acc{display: block}
+    .gnb-open #acc{display: flex}
     #gnb .depth_left,#gnb .depth2_left{display: none}
     .gnb>li{display: block;border-bottom: 1px solid #dadada;}
     .gnb>li>a{color: #222; height: auto; line-height: 47px}
@@ -401,6 +415,7 @@ transition: all 0.3s;}
     .sub_wrap >ul> li:last-child{margin: 0}
     .sub_wrap >ul> li{font-size: 14px;padding: 0; border-top: none; border-bottom:1px solid #fff; font-weight: 400}
     .sub_wrap>ul>li>a{padding: 15px 20px}
+    .sub_wrap>ul>li:hover a{color: inherit;}
     .depth_list>li>span{display: block; font-size: 14px;padding: 15px 20px; border-top: none;font-weight: 400; cursor: pointer}
     .depth2_sub_list{display: none}
     .depth2_sub_list>ul{width: 100%;}    
@@ -413,7 +428,6 @@ transition: all 0.3s;}
     .depth2_sub_list>ul:nth-child(2){margin: 0}
     #gnb .depth2_list>li{display: block; padding: 0}
     #gnb .sub_bottom_size{padding-bottom: 0}
-    
     
     body.is-scroll #header{backdrop-filter: none;}
     .section2_container .section2_next,
@@ -440,14 +454,17 @@ transition: all 0.3s;}
 }
 
 @media screen and (max-width:767px) {
+    .container{padding: 0 20px;}
     .h3{font-size: 24px;}
     body.is-scroll #header{backdrop-filter: none;}
     .gnb_right>a:not(.b_r_1){display: none;}
     
+    
     /* main swiper1 */
     
     .main_visual_video .swiper-wrapper{display: block}
-    
+    .main_visual video{display: none;}
+    .swiper-pagination{display: none;}
     .section3{padding: 50px 0 100px 0;}
     .section4{padding: 50px 0 100px 0;}
     .section6{padding: 50px 0 100px 0;}

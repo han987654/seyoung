@@ -51,12 +51,11 @@
                     <div class="logo"><a href="#">NAVER CLOUD PLATFORM</a></div>
                     <nav id="gnb">
                         <!-- 모바일 전용 메뉴 -->
-                        <button type="button" class="js-gnb-open no-style" title="메뉴 열기"><i class="xi-bars"></i></button>
-                        <div id="acc">
+                        <div id="acc" class="acc_buttons">
                             <div class="buttons">
-                                <a href="">로그인</a>
-                                <a href="">회원 가입</a>
-                                <a href="">Languages</a>
+                                <a href="#">로그인</a>
+                                <a href="#">회원 가입</a>
+                                <a href="#">Languages <i class="xi-angle-down-min"></i></a>
                             </div>
                             <button type="button" class="js-gnb-cls no-style" title="메뉴 닫기"><i class="xi-close"></i></button>
                         </div>
@@ -152,7 +151,7 @@
                                                                         <p>인쇄물 속 글자를 추출하여 디지털 데이터로 변환해 주는 서비스</p>
                                                                     </a>
                                                                 </li>
-
+                                                                
                                                                 <li>
                                                                     <a href="#">
                                                                         <p class="p_2 p_txt">Developer Tools</p>
@@ -420,6 +419,7 @@
                                                                     <a href="#">
                                                                         <p class="p_txt2">Database Migration Service</p>
                                                                         <p>데이터베이스를 클라우드 환경으로 손쉽게 마이그레이션하는 서비스</p>
+                                                                    
                                                                     </a>
                                                                 </li>
                                                             </ul>
@@ -1707,9 +1707,14 @@
 
                     </nav><!-- nav -->
                     <div class="gnb_right">
-                        <a href="#" class="b_r_1">돋보기</a> <!--#4ca4f5;-->
+                        <button type="button" class="b_r_1 no-style" title="검색"><i class="xi-search"></i></button>
                         <a href="#" class="b_r_2">문의하기 <img src="img/btn_rolling_s_down.png" alt="down" class="down"></a>
                         <a href="#" class="b_r_3">콘솔</a>
+                        
+                        
+                        <button type="button" class="js-gnb-open no-style" title="사람"><i class="xi-user"></i></button>
+                        <button type="button" class="js-gnb-open no-style" title="검색"><i class="xi-search"></i></button>
+                        <button type="button" class="js-gnb-open js_gnb_menu no-style" title="메뉴 열기"><i class="xi-bars"></i></button>
                     </div><!-- gnb_right -->
                 </div><!-- container -->
             </div><!-- navbar -->
@@ -1723,6 +1728,7 @@
                             <div class="main_visual">
                                 <video src="video/CLOVAStudio2.0_NCP_PC_1697622255022.mp4" autoplay="" loop="" muted="" playsinline="" style="height: 720px;">
                                 </video>
+                                <img src="img/CLOVAStudio2.0_MO_390x560_2x_1697622663499.png" alt="videoimg1">
                                 <div class="main_visual_text">
                                     <h2>더욱 강력해진 CLOVA Studio</h2>
                                     <p>HyperCLOVA X를 탑재하여 진화된 퍼포먼스를 선보입니다.</p>
@@ -1735,6 +1741,7 @@
                             <div class="main_visual">
                                 <video src="video/NCPBanner_9mb_1698639732676.mp4" autoplay="" loop="" muted="" playsinline="" style="height: 720px;">
                                 </video>
+                                <img src="img/BG_IMG_1698639792861.png" alt="videoimg">
                                 <div class="main_visual_text">
                                     <h2>GAK SEJONG</h2>
                                     <p>미래를 이끌 기술들의 기반이 되는 '각 세종'을 소개합니다.</p>
@@ -1746,6 +1753,7 @@
                             <div class="main_visual">
                                 <video src="video/NCC_Saudi_1600x828_1698383812167.mp4" autoplay="" loop="" muted="" playsinline="" style="height: 720px;">
                                 </video>
+                                <img src="img/BG_IMG_1698384652223.png" alt="videoimg">
                                 <div class="main_visual_text">
                                     <h2>디지털 트윈, 사우디에 짓다</h2>
                                     <p>네이버클라우드의 기술이 사우디아라비아로 뻗어나갑니다.</p>

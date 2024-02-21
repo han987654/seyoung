@@ -15,6 +15,12 @@ $(function(){
             })
         })
 
+        //-----네비배경
+        $(".gnb").hover(function(){
+            $(".navbar").css({background:'black'})
+        },function(){
+            $(".navbar").css({background:'none'})
+        })
 
         var lastScrollTop = 0;
 	$window.scroll(function(){
@@ -53,8 +59,9 @@ $(function(){
         $('.depth2_list>li').eq(n).addClass('current').siblings('li').removeClass('current');
     });
     
-    $('.js-gnb-open').click(function(){
+    $('.js_gnb_menu').click(function(){
         $('body').addClass('gnb-open');
+        
     });
     
     $('.js-gnb-cls').click(function(){
@@ -66,6 +73,7 @@ $(function(){
         $this.parents(toogleParent).addClass('depth-open').siblings(toogleParentList).removeClass('depth-open'); //+ - 버튼 css 할거임.
     }
     $('.gnb>li>a').click(function(){
+        // $(this).css({color:'#4ca4f5'})
         var $this = $(this),
             toogleList = $('.depth'),
             toogleParent = $('.gnb>li'),
@@ -86,7 +94,7 @@ $(function(){
     
     $('.depth_list>li>span').click(function(){
         
-         var $this = $(this),
+        var $this = $(this),
             toogleList = $('.depth_right_list'),
             toogleParent = $('.depth_list'),
             toogleParentList = $('ul')
@@ -94,7 +102,6 @@ $(function(){
         
     });
     
-   
 });
 
 
