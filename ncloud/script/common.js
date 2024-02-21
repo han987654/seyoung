@@ -101,6 +101,10 @@ $(function(){
         mobileGnbToogle( $this, toogleList, toogleParent, toogleParentList );
         
     });
+
+    $('.footer_menu>ul>li').click(function(){
+        $(this).find('.footer_sub').slideToggle();
+    })
     
 });
 
