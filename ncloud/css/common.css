@@ -427,6 +427,18 @@ transition: all 0.3s;}
     .sub_wrap>ul>li:hover a{color: inherit;}
     .depth_list>li>span{display: block; font-size: 14px;padding: 15px 20px; border-top: none;font-weight: 400; cursor: pointer}
 
+    .depth2_sub_list{display: none}
+    .depth2_sub_list>ul{width: 100%;}    
+    .depth2_sub_list>ul>li p:last-child {display: none}
+    .depth2_sub_list>ul>li .p_txt{display: none}
+    .depth2_sub_list>ul>li p.p_txt2{font-size: 14px; font-weight: 200}
+    .depth2_sub_list>ul>li{padding: 0; border: none; background-color: #f1f1f1}
+    .depth2_sub_list>ul>li a{display: block; padding-left: 20px; width: 100%;padding: 15px 20px} 
+    .depth2_list >li >h2{margin-bottom: 0;padding: 15px 20px;border-bottom: 1px solid #fff;font-size: 14px;font-weight: 400;cursor: pointer}
+    .depth2_sub_list>ul:nth-child(2){margin: 0}
+    #gnb .depth2_list>li{display: block; padding: 0}
+    #gnb .sub_bottom_size{padding-bottom: 0}
+
     .section3 .icon_container .swiper_wrapper11 .swiper-slide{width: 144px !important;height: 166px !important;}
     .swiper-slide >.swiper_icon_list> .swiper_icon_list_left{width: 30%;margin-right: 20px;}
     .swiper_icon_list_right{width: 70%;}
