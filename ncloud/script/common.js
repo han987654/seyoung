@@ -82,11 +82,11 @@ $(function(){
         return false;
     });
     
-    $('.depth2_list >li >h2').click(function(){
+    $('#header .depth2_list >li >h2').click(function(){
         
         var $this = $(this),
-            toogleList = $('.depth2_sub_list'),
-            toogleParent = $('.depth2_list>li'),
+            toogleList = $('#header .depth2_sub_list'),
+            toogleParent = $('#header .depth2_list>li'),
             toogleParentList = $('li')
         mobileGnbToogle( $this, toogleList, toogleParent, toogleParentList );
         
