@@ -387,8 +387,9 @@ body.is-scroll #header{backdrop-filter:blur(10px);;}
     body.is-scroll #header{backdrop-filter: none;}
     .gnb_right>a:not(.b_r_1){display: none;}
     /* main swiper1 */
-    .main_visual_video .swiper-wrapper{display: block}
+    .main_visual_video .swiper-wrapper{display: block;}
     .main_visual video{display: none;}
+    .main_visual_video .swiper-slide{margin-bottom: 10px;}
     .swiper-pagination{display: none;}
     .section3{padding-bottom:100px}
     .section3 .swiper_icon2{display: none;}
