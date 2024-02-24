@@ -5,22 +5,10 @@ body,input,textarea,select,button,table{font-family: 'Pretendard-Regular','Apple
 a,a:hover,a:focus,a:active{text-decoration: none;color: inherit;}
 ol,ul,li{list-style: none;}
 img{vertical-align: top}
-
-
 .clear_fix::before,
-.clear_fix::after{
-    content: "";
-    display: block;
-    clear: both;
-}
-
-
+.clear_fix::after{content: "";display: block;clear: both;}
 table{border-collapse: collapse;}
 img{vertical-align: bottom;}
-
-
-
-
 /* Helper Classes */
 .no-style{margin: 0;padding: 0;border: 0;background: none}
 .ellipsis{overflow: hidden;text-overflow: ellipsis;white-space: nowrap}
