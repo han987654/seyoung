@@ -68,44 +68,50 @@ $(function(){
         $('body').removeClass('gnb-open');
     });
     
-    var mobileGnbToogle = function( $this, toogleList, toogleParent, toogleParentList){
-        $this.next(toogleList).slideToggle().parents(toogleParent).siblings(toogleParentList).find(toogleList).slideUp();
-        $this.parents(toogleParent).addClass('depth-open').siblings(toogleParentList).removeClass('depth-open'); //+ - 버튼 css 할거임.
+    var mobileGnbToggle = function( $this, toggleList, toggleParent, toggleParentList){
+        $this.next(toggleList).slideToggle().parents(toggleParent).siblings(toggleParentList).find(toggleList).slideUp();
+        $this.parents(toggleParent).addClass('depth-open').siblings(toggleParentList).removeClass('depth-open'); //+ - 버튼 css 할거임.
     }
     $('.gnb>li>a').click(function(){
+        $(this).find('i').toggleClass('xi-minus').parents('li').siblings().find('i').removeClass('xi-minus');
         // $(this).css({color:'#4ca4f5'})
         var $this = $(this),
-            toogleList = $('.depth'),
-            toogleParent = $('.gnb>li'),
-            toogleParentList = $('li')
-        mobileGnbToogle( $this, toogleList, toogleParent, toogleParentList );
+            toggleList = $('.depth'),
+            toggleParent = $('.gnb>li'),
+            toggleParentList = $('li')
+        mobileGnbToggle( $this, toggleList, toggleParent, toggleParentList );
         return false;
+
+        
     });
     
     $('#header .depth2_list >li >h2').click(function(){
-        
         var $this = $(this),
-            toogleList = $('#header .depth2_sub_list'),
-            toogleParent = $('#header .depth2_list>li'),
-            toogleParentList = $('li')
-        mobileGnbToogle( $this, toogleList, toogleParent, toogleParentList );
+            toggleList = $('#header .depth2_sub_list'),
+            toggleParent = $('#header .depth2_list>li'),
+            toggleParentList = $('li')
+        mobileGnbToggle( $this, toggleList, toggleParent, toggleParentList );
         
     });
     
     $('.depth_list>li>span').click(function(){
         
         var $this = $(this),
-            toogleList = $('.depth_right_list'),
-            toogleParent = $('.depth_list'),
-            toogleParentList = $('ul')
-        mobileGnbToogle( $this, toogleList, toogleParent, toogleParentList );
+            toggleList = $('.depth_right_list'),
+            toggleParent = $('.depth_list'),
+            toggleParentList = $('ul')
+        mobileGnbToggle( $this, toggleList, toggleParent, toggleParentList );
         
     });
-
+    
     $('.footer_menu>ul>li').click(function(){
         $(this).find('.footer_sub').slideToggle();
+        $(this).siblings('li').find('.footer_sub').slideUp();
+        $(this).find('i').toggleClass('xi-angle-down');
+        $(this).find('i').addClass('xi-angle-up');
+        $(this).siblings().children('i').removeClass('xi-angle-up');
+        $(this).siblings().children('i').addClass('xi-angle-down')
     })
-    
 });
 
 

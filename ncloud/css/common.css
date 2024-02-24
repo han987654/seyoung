@@ -35,8 +35,8 @@ body.is-scroll #header{backdrop-filter:blur(10px);;}
 .gnb>li{display: inline-block;}
 .gnb>li.current>.depth{display: block} /* 물어보기*/
 .gnb>li>a{display: block;height: 60px;padding: 0 15px;font-size: 16px;font-weight: 700;line-height: 60px;color: #fff;transition: all 0.3s;}
-.gnb>li>a:hover,
-.gnb>li.current>a{color:#4ca4f5;}
+.gnb>li>a:hover, .gnb>li.current>a{color:#4ca4f5;}
+.gnb>li>a>i{display: none;}
 .depth{display: none;position: absolute;top: 100%;left: 0;width: 100%;padding: 30px 0 40px;border-bottom:1px solid #e0e0e0;font-size: 16px;background:#f6f7f8}
 .depth>.container{overflow: hidden}
 #acc{display: none}
@@ -385,6 +385,9 @@ body.is-scroll #header{backdrop-filter:blur(10px);;}
     .container{padding: 0 20px;}
     .h3{font-size: 24px;}
     body.is-scroll #header{backdrop-filter: none;}
+    .gnb>li>a{position: relative;}
+    .gnb>li>a>i{display: block; position: absolute;right: 20px; top: 50%; transform: translateY(-50%);font-size: 20px;color: #aaa;}
+    .gnb>li:hover>a>i{color: #4ca4f5;}
     .gnb_right>a:not(.b_r_1){display: none;}
     /* main swiper1 */
     .main_visual_video .swiper-wrapper{display: block;}
