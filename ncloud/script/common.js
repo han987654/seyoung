@@ -23,27 +23,26 @@ $(function(){
         })
 
         var lastScrollTop = 0;
-	$window.scroll(function(){
-		var sT = $(this).scrollTop();
+        $window.scroll(function(){
+            var sT = $(this).scrollTop();
 
-		if ($(this).scrollTop()>0) {
-			$body.addClass('is-scroll');
-		}else {
-			$body.removeClass('is-scroll');
-		}
-        if(sT>lastScrollTop){
-			$body.addClass('scroll-down');
-			$body.removeClass('scroll-up');
-		} else {
-			$body.removeClass('scroll-down');
-			$body.addClass('scroll-up');
-		}
-		lastScrollTop = sT;
-
-	}).trigger('scroll');
+            if ($(this).scrollTop()>0) {
+                $body.addClass('is_scroll');
+            }else {
+                $body.removeClass('is_scroll');
+            }
+            if(sT>lastScrollTop){
+                $body.addClass('scroll_down');
+                $body.removeClass('scroll_up');
+            } else {
+                $body.removeClass('scroll_down');
+                $body.addClass('scroll_up');
+            }
+            lastScrollTop = sT;
+        }).trigger('scroll');
 
     
-    $('.gnb>li').hover(function () {
+    $('.gnb>li').hover(function(){
         $(this).addClass('current').siblings('li').removeClass('current');
 
     }, function () {
@@ -60,17 +59,17 @@ $(function(){
     });
     
     $('.js_gnb_menu').click(function(){
-        $('body').addClass('gnb-open');
+        $('body').addClass('gnb_open');
         
     });
     
-    $('.js-gnb-cls').click(function(){
-        $('body').removeClass('gnb-open');
+    $('.js_gnb_cls').click(function(){
+        $('body').removeClass('gnb_open');
     });
     
     var mobileGnbToggle = function( $this, toggleList, toggleParent, toggleParentList){
         $this.next(toggleList).slideToggle().parents(toggleParent).siblings(toggleParentList).find(toggleList).slideUp();
-        $this.parents(toggleParent).addClass('depth-open').siblings(toggleParentList).removeClass('depth-open'); //+ - 버튼 css 할거임.
+        $this.parents(toggleParent).addClass('depth_open').siblings(toggleParentList).removeClass('depth_open');
     }
     $('.gnb>li>a').click(function(){
         $(this).find('i').toggleClass('xi-minus').parents('li').siblings().find('i').removeClass('xi-minus');
