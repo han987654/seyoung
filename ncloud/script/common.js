@@ -2,20 +2,13 @@ $(function(){
     var $body = $('body'),
         $window = $(window);
 
-        //-----언어
+        //-----dropdown    
         $(function(){
-            $("#header .languages>a").click(function(){
-                $("#header .languages_list").toggle();
+            $('.js-dropdown>a').click(function(){
+                $(this).parent().find('.js-dropdown-list').toggle();
                 return false;
-            })
-        })
-
-        $(function(){
-            $("#footer .lang").click(function(){
-                $("#footer .lang .languages_list").toggle();
-                return false;
-            })
-        })
+            });
+        });
 
         //-----네비배경
         $(".gnb").hover(function(){
