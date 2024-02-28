@@ -4,13 +4,15 @@ $(function(){
 
         //-----언어
         $(function(){
-            $(".languages>a").click(function(){
-                $(".languages_list").toggle();
+            $("#header .languages>a").click(function(){
+                $("#header .languages_list").toggle();
+                return false;
             })
         })
+
         $(function(){
-            $('.lang').click(function(){
-                $(".footer_btn .languages_list").toggle();
+            $("#footer .lang").click(function(){
+                $("#footer .lang .languages_list").toggle();
                 return false;
             })
         })
